@@ -3,7 +3,7 @@
   "version": "1.2.0",
   "description": "Reusable utils helper",
   "author": "Martin Ouimet <mouimet@infini-soft.com>",
-  "homepage": "https://github.com/mouimet-infinisoft/INFINICLOUD#readme",
+  "homepage": "https://github.com/mouimet-infinisoft/utils#readme",
   "license": "ISC",
   "main": "lib/index.js",
   "directories": {
@@ -18,7 +18,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/mouimet-infinisoft/INFINICLOUD.git"
+    "url": "git+https://github.com/mouimet-infinisoft/utils.git"
   },
   "scripts": {
     "build:lib": "tsc",
@@ -26,7 +26,7 @@
     "clean": "rm -rf ./dist ./out ./lib ./src/.umi"
   },
   "bugs": {
-    "url": "https://github.com/mouimet-infinisoft/INFINICLOUD/issues"
+    "url": "https://github.com/mouimet-infinisoft/utils/issues"
   },
   "dependencies": {
     "dayjs": "^1.11.0"
