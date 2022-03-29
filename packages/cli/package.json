@@ -1,0 +1,37 @@
+{
+  "name": "@infini-soft/cli",
+  "version": "1.0.3",
+  "description": "CLI tool for easier process automation",
+  "author": "Martin Ouimet <mouimet@infini-soft.com>",
+  "homepage": "https://github.com/mouimet-infinisoft/utils#readme",
+  "license": "ISC",
+  "bin": {
+    "cli": "./bin/cli.js"
+  },
+  "main": "./lib/index.js",
+  "directories": {
+    "lib": "lib",
+    "bin": "bin"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mouimet-infinisoft/utils.git"
+  },
+  "scripts": {
+    "test": "echo \"Error: run tests from root\" && exit 1",
+    "clean": "rm -rf ./dist ./out ./lib ./src/.umi",
+    "build:lib": "tsc"
+  },
+  "bugs": {
+    "url": "https://github.com/mouimet-infinisoft/utils/issues"
+  },
+  "devDependencies": {
+    "@types/node": "^17.0.23"
+  },
+  "dependencies": {
+    "axios": "^0.26.1"
+  }
+}
