@@ -1,0 +1,65 @@
+{
+  "name": "@infini-soft/logger",
+  "version": "1.0.0",
+  "description": "Flexible logger package",
+  "author": "Martin Ouimet <mouimet@infini-soft.com>",
+  "homepage": "https://github.com/mouimet-infinisoft/utils#readme",
+  "license": "ISC",
+  "main": "lib/index.js",
+  "types": "lib/types/index.d.ts",
+  "keywords": [
+    "log",
+    "logging",
+    "infinisoft",
+    "logger"
+  ],
+  "directories": {
+    "lib": "lib"
+  },
+  "files": [
+    "lib"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "bugs": {
+    "url": "https://github.com/mouimet-infinisoft/utils/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Infinisoft-inc/utils.git"
+  },
+  "scripts": {
+    "test": "jest",
+    "types": "tsc --declaration --emitDeclarationOnly",
+    "build:lib": "tsc",
+    "clean": "rm -rf ./dist ./out ./lib ./src/.umi"
+  },
+  "devDependencies": {
+    "@types/jest": "^27.4.1",
+    "antd": "^4.19.3",
+    "jest": "^27.5.1",
+    "jest-cli": "^27.5.1",
+    "ts-jest": "^27.1.4"
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+}

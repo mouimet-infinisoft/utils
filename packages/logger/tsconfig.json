@@ -1,0 +1,23 @@
+{
+  "extends": "../../tsconfig.json",
+  "compilerOptions": {
+    "module": "commonjs",
+    "target": "ES2019",
+    "lib": ["ES2019","dom"],
+    "types": ["node", "jest"],
+    "moduleResolution": "node",
+    "sourceMap": true,
+    "strict": true,
+    "rootDir":"./src",
+    "outDir": "./lib",
+    "declaration": true,
+    "declarationMap": true,
+    "declarationDir":"./lib/types",
+    "experimentalDecorators": true
+  },
+  "files":[
+    "./src/index.ts",
+    "./src/provider.ts",
+    "src/plugins/console.ts"
+  ]
+}
