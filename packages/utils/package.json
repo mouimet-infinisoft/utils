@@ -1,0 +1,34 @@
+{
+  "name": "@infini-soft/utils",
+  "version": "1.2.0",
+  "description": "Reusable utils helper",
+  "author": "Martin Ouimet <mouimet@infini-soft.com>",
+  "homepage": "https://github.com/mouimet-infinisoft/INFINICLOUD#readme",
+  "license": "ISC",
+  "main": "lib/index.js",
+  "directories": {
+    "lib": "lib",
+    "test": "__tests__"
+  },
+  "files": [
+    "lib"
+  ],
+  "publishConfig": {
+    "registry": "https://registry.npmjs.com/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mouimet-infinisoft/INFINICLOUD.git"
+  },
+  "scripts": {
+    "build:lib": "tsc",
+    "test": "echo \"Error: run tests from root\" && exit 1",
+    "clean": "rm -rf ./dist ./out ./lib ./src/.umi"
+  },
+  "bugs": {
+    "url": "https://github.com/mouimet-infinisoft/INFINICLOUD/issues"
+  },
+  "dependencies": {
+    "dayjs": "^1.11.0"
+  }
+}
