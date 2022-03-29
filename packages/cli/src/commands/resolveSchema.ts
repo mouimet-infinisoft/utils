@@ -1,6 +1,21 @@
+/**
+ * Copyright © All rights reserved 2022
+ * Infinisoft Inc.
+ * www.infini-soft.com
+ * 
+ * JSOM Schema Reference Resolver
+ * 
+ */
+
 import { writeFileSync } from 'fs';
 const axios = require('axios').default;
 
+/**
+ * 
+ * @param unresolved Unserialized JSON Schema
+ * @param resource   REST API Resource
+ * @returns          Unserialized Resolved JSON Schema
+ */
 const resolve = async (unresolved: unknown, resource: string) => {
     let resolved = unresolved;
 
@@ -13,6 +28,9 @@ const resolve = async (unresolved: unknown, resource: string) => {
     return resolved
 }
 
+/**
+ * COmmand entry point
+ */
 export const resolveSchema = async () => {
 
     console.log(`
