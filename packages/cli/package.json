@@ -29,7 +29,8 @@
     "url": "https://github.com/mouimet-infinisoft/utils/issues"
   },
   "devDependencies": {
-    "@types/node": "^17.0.23"
+    "@types/node": "^17.0.23",
+    "ts-node": "^10.7.0"
   },
   "dependencies": {
     "axios": "^0.26.1"
