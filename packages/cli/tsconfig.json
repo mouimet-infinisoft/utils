@@ -12,12 +12,12 @@
     "sourceMap": true,
     "skipLibCheck":true,
     "lib": [
-      "es2021"
+      "es2021",
+      "ES2021.String"
     ]
   },
   "exclude": [
     "node_modules",
-    "**/*.spec.ts",
-    "prompt.ts"
+    "**/*.spec.ts"
   ]
  }

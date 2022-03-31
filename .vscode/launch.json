@@ -28,7 +28,7 @@
       "program": "src/commands/resolveSchema.ts",
       "args": [
         "${workspaceFolder}/packages/cli/src/commands/resolveSchema.ts",
-        "https://www.kitchen.infini-soft.com/share/schema/common/list.json",
+        "https://www.kitchen.infini-soft.com/share/schemas/api/rest.json",
         "contact",
         "detenbd.json"
       ],
