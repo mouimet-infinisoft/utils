@@ -64,7 +64,7 @@ const createMicroAppTemplate = (config: Config, context: Context) => {
         () => process.chdir(targetDir),
         () => exec(`yarn create @umijs/umi-app`, logger),
         () => exec(`rm ${targetDir}/.umirc.ts`, logger),
-        () => exec(`tar zxvf ${templateArchive} --force-local`, logger),
+        () => exec(`curl ${templateArchive} | tar zxvf -`, logger),
         () => updateConfig(logger, config),
         () => exec(`echo PORT=${portNumber} > .env`, logger),
         () => exec(`echo UMI_UI=none >> .env`, logger),
@@ -100,10 +100,29 @@ const createMicroAppTemplate = (config: Config, context: Context) => {
     }
 }
 
-const updateConfig = (logger: Logger, { pkgName, targetJson, configJson, appName, templateJson }: Config) => {
+const updateConfig =  (logger: Logger, { pkgName, targetJson, configJson, appName, templateJson }: Config) => {
     logger.info({ message: `Upadating config` })
     try {
-        const _templateJson = JSON.parse(readFileSync(templateJson).toString('utf8'))
+
+        const _templateJson =    {
+            "name": "@infini-soft/testv1234",
+            "version": "1.0.0",
+            "description": "Infinicloud Micro Front End App",
+            "author": "Infinisoft Inc. <info@infini-soft.com>",
+            "homepage": "http://www.infini-soft.com/",
+            "license": "UNLICENSED",
+            "private": false,
+            "scripts": {
+                "start:mock": "set ENV=mock&& umi dev",
+                "start:test": "set ENV=test&& umi dev",
+                "openapi": "umi openapi",
+                "test": "jest",
+                "types": "tsc --declaration --emitDeclarationOnly",
+                "build": "tsc",
+                "clean": "rm -rf ./dist ./out ./lib ./src/.umi"
+            }
+        }
+        console.log(`tempalte json `, _templateJson)
         const targetAppJson = JSON.parse(readFileSync(targetJson).toString('utf8'))
 
         logger.info({ message: `initial config = `, context: targetAppJson })
@@ -208,10 +227,10 @@ const promptConfig = async (context: Context): Promise<Config> => {
     const defaultTemplateFile = `micro${context.package.version}.tar.gz`
     const _templateFile = await prompt(`Change template archive? (default is ${defaultTemplateFile}) `)
     const templateFile = _templateFile ? _templateFile : defaultTemplateFile
-    const templateArchive = resolve(`${context.paths.packageTemplatePath}/${templateFile}`)
-    const templateJson = resolve(`${context.paths.packageTemplatePath}/package.json`)
+    const templateArchive = `${context.paths.packageTemplatePath}/${templateFile}`
+    const templateJson = `https://www.kitchen.infini-soft.com/share/templates/package.json`
 
-    const targetDir = resolve(`${context.paths.executionBasePath}/${appName}`)
+    const targetDir = resolve(`${context.paths.executionBasePath}/packages/${appName}`)
     const targetSchema = resolve(`${targetDir}/models/schemas/schemas.json`)
     const targetJson = resolve(`${targetDir}/package.json`)
     const configJson = resolve(`${targetDir}/config/config.json`)

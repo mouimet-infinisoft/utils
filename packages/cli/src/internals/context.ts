@@ -5,7 +5,7 @@
  */
 import { Logger } from '@infini-soft/logger/lib';
 import type { Logger as TLogger } from '@infini-soft/logger/lib/types/logger';
-import { join, resolve } from 'path';
+import { resolve } from 'path';
 const pkg = require('../../package.json')
 
 type Paths = {
@@ -28,7 +28,7 @@ export type Context = {
 
 export const context = (): Context => {
     const packageBasePath = resolve(__dirname, '..', '..')
-    const packageTemplatePath = join(packageBasePath, 'templates')
+    const packageTemplatePath = `https://www.kitchen.infini-soft.com/share/templates`
     const executionBasePath = process.cwd()
 
     return {

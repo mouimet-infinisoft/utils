@@ -35,6 +35,20 @@
       "cwd": "${workspaceFolder}/packages/cli",
       "internalConsoleOptions": "openOnSessionStart",
       "skipFiles": ["<node_internals>/**", "node_modules/**"]
+    },
+    {
+      "name": "TS Create",
+      "type": "node",
+      "request": "launch",
+      "runtimeExecutable": "node",
+      "runtimeArgs": ["--nolazy", "-r", "ts-node/register"],
+      "program": "src/cli.ts",
+      "args": [
+        "create",
+      ],
+      "cwd": "${workspaceFolder}/packages/cli",
+      "internalConsoleOptions": "openOnSessionStart",
+      "skipFiles": ["<node_internals>/**", "node_modules/**"]
     }
   ]
 }
